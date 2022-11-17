@@ -8,7 +8,11 @@ import { HomePage } from './pages/HomePage'
 import { CheckoutPage } from './pages/CheckoutPage'
 import { SuccessPage } from './pages/SuccessPage'
 
-export const AppRoutes: React.FC = ({ children }) => {
+type AppRoutesProps = {
+  children?: React.ReactNode
+}
+
+export const AppRoutes: React.FC<AppRoutesProps> = ({ children }) => {
   const location = useLocation()
   // Scroll to top when a path changes
   useLayoutEffect(() => {
